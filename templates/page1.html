@@ -1,0 +1,534 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf_8">
+        <meta name="descrition" content="Plants">
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
+		</script>
+
+        <style type="text/css">
+        @import url(http://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
+            
+        body {
+          background-image : url("{% static 'images/asmaa.jpg' %}"); 
+          background-attachment:fixed;
+          background-repeat:no-repeat;
+          background-size: cover;
+          background-position:center;
+          padding: 0;
+          margin: 0;
+          height:100%;
+          width:100%;
+        }
+      p{
+      color:black ;
+      }
+       
+        h1,
+      h2 {
+        font-family: "Tohama", cursive;
+        color:black;
+      }
+      
+      .heading_container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+      }
+      
+      .heading_container h2 {
+        position: relative;
+        margin-bottom: 10;
+        font-size: 2.5rem;
+        font-weight: bold;
+      }
+      
+      .heading_container p {
+        margin-top: 1px;
+        margin-bottom: 0;
+      }
+      
+      .heading_container.heading_center {
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        text-align: center;
+      }
+      
+      a,
+      a:hover,
+      a:focus {
+        text-decoration: none;
+      }
+      
+      a:hover,
+      a:focus {
+        color: initial;
+       
+      }
+      
+      .btn,
+      .btn:focus {
+        outline: none !important;
+        -webkit-box-shadow: none;
+                box-shadow: none;
+      }
+       ul{
+	padding-right:25px;
+	margin-top :2px;
+	float : right;
+}
+
+li{
+	display : inline-block ;
+	padding-left : 25px ;
+	color: #410326;
+	font-size : 18px;
+	font-family:'Droid Arabic Kufi';
+
+}
+
+a{
+	text-decoration-line: none;
+	display: inline-block;
+	padding: 10px 30px;
+	background-color: #f3a4cc;
+	color: #af0c5e;
+	border-radius: 0;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+	border: none;
+	margin-top: 0px;
+    border-radius: 8px;
+	border-color:#af0c5e;
+}
+	  
+a:hover {
+    -webkit-transform: translateY(-3px);
+            transform: translateY(-3px);
+    -webkit-box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.15);
+            box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.15);
+            background-color : #af0c5e;
+            color: #f3a4cc;
+            font-size:18px;
+            border-style: double;
+            border-color:#f3a4cc;
+  }	  
+	  
+.nheader{
+	background-color : #af0c5e; 
+	padding : 50px ;
+	height : 25px ;
+	text-align :left ;
+	left :50px ;
+
+}
+
+label{
+    cursor: pointer;
+    font-family:'Droid Arabic Kufi';
+}
+.A{
+    position: relative;
+    margin-top: 30px ;
+    width: 300px;
+    height: 500px;
+    overflow-y: scroll;
+    overflow-x:hidden;
+	margin-left:1000px;
+}
+.img1{
+    border: #e5eaeb solid 2px;
+    border-radius: 8px;
+    width: 400px;
+    height: 300px;
+    position: absolute;
+    top:0px;
+    left : 3px;
+}
+{% comment %} .same{
+    width: 1300px;
+    height: 400px;
+    margin: -270px 0 100px 140px;
+    border: #69deee solid 2px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    }
+.same div{
+
+    border: #f3eef1 solid 5px;
+    width: 20%;
+    height: 250px;
+    margin: 50px;
+
+}  {% endcomment %}
+.f{
+    color: black;
+    border-radius: 20px;
+    display: block;
+    margin-top:40px;
+}
+
+.nameplan1{
+	margin-top:0px;
+	width:170px;
+	height:50px;
+	border-style:inset;
+	border-color:#ac266f;
+	border-radius:15px;
+    background-color:#f3a4cc;
+	display:inline-block;
+	position:relative;
+	text-align:center;
+	font-size:16px;
+	margin-left:115px;
+    color:#ac266f;
+
+}
+
+.nameplan2{
+	width:170px;
+	height:50px;
+	border-style:inset;
+	border-color:#ac266f;
+	border-radius:15px;
+    background-color:#f3a4cc;
+	display:inline-block;
+	position:relative;
+	text-align:center ;
+	font-size:16px;
+	margin-left:125px;
+    color:#ac266f;
+
+}
+
+.nameplan3{
+	width:170px;
+	height:50px;
+	border-style:inset;
+	border-color:#ac266f;
+	border-radius:15px;
+	background-color:#f3a4cc;
+	display:inline-block;
+	position:relative;
+	text-align:center ;
+	font-size:16px;
+	margin-left:125px;
+    color:#ac266f;
+}
+
+.nameplan4{
+	width:170px;
+	height:50px;
+	border-style:inset;
+	border-color:#ac266f;
+	background-color:#f3a4cc;
+	border-radius:15px;
+	display:inline-block;
+	position:relative;
+	text-align:center;
+	font-size:16px;
+    font-style:bold;
+	margin-left:125px;
+    color:#ac266f;
+    padding:2px;
+}
+
+{% comment %} 
+.name{
+    width: 230px;
+    height: 30px;
+    margin: 5px 0 0 430px;
+    border: #ef9ac9 solid 2px;
+    border-radius: 15px;
+    background-color: #d6b9ef;
+    color: #0a0a0a;
+    position: absolute;
+    top: 320px;
+    right: 0;
+    bottom: 50px;
+    left: -340px;
+    text-align: center;
+    font-size: 25px;
+} {% endcomment %}
+
+.img1{
+    float:left;
+    margin-top:500px;
+    margin-left:150px;
+    margin-top:220px;
+}
+.img2{
+
+    border-radius: 15px;
+	width:400px;
+	height:400px;
+	overflow:hidden;
+	align:center;
+}
+.img3{
+	border-radius: 15px;
+	width:200px;
+	height:300px;
+	overflow:hidden;
+	margin-right:5
+}
+.image1{
+	margin-top:60px;
+	border-radius:15px;
+	display:inline-block;
+	position:relative;
+	margin-left:100px;
+	overflow:hidden;
+}
+
+.image2{
+
+	border-radius:15px;
+	display:inline-block;
+	position:relative;
+	margin-left:100px;
+	overflow:hidden;
+
+}
+
+.image3{
+
+	border-radius:15px;
+	display:inline-block;
+	position:relative;
+	margin-left:100px;
+	overflow:hidden;
+	posistion:center;
+
+}
+
+.image4{
+	border-radius:15px;
+	display:inline-block;
+	position:relative;
+	margin-left:100px;
+	overflow:hidden;
+	margin-top: 0px;
+}
+
+.name1{
+    background-color:#f3a4cc;
+    color:#ac266f;
+    text-align:center;
+    float:left;
+	margin-left:220px;
+	width:200px;
+	height:50px;
+	border-style:solid;
+	border-radius:15px;
+	margin-top:540px;
+	font-size:22px;
+    padding:2px;
+}
+.tip{
+    text-align:center;
+    background-color:#74e5c2;
+    border-style:dotted;
+    border-color:#0fac7c;
+    width:250px;
+    margin-left:500px;
+    margin-top:10px;
+    margin-top:30px;
+    margin-bottom:20px;
+}
+.fas fa-code:hover{
+    background-color: #fa0270;
+    color: #fee6f1;
+}
+
+.care{
+
+    flex:left;
+    padding: 2px 2px 4px 2px;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 1.0em auto;
+    height: 480px;
+    width:500px;
+    overflow-y:scroll;
+    margin-left:300px;
+    border:none;
+}
+
+.step1{
+	
+    margin-top:50px;
+    width:90%;
+    height:23%%;
+    border-style:solid;
+    border-color:#af0c5e; 
+    display:inline-block;
+    position:relative;
+    font-size:16px;
+    color:black;
+    padding-bottom:10px;
+    margin-right:5%;
+    border-radius:12px;	
+    margin-bottom:25px;
+    text-align: center;
+    padding:2px;
+
+}
+
+.step2{
+    width:90%;
+    height:23%%;
+    border-style:solid;
+    border-color:#af0c5e; 
+    display:inline-block;
+    margin-right:5%;
+    border-radius:12px;	
+    margin-bottom:25px;
+    text-align: center;
+    padding:2px;
+}
+
+.step3{
+    width:90%;
+    height:23%%;
+    border-style:solid;
+    border-color:#af0c5e; 
+    display:inline-block;
+    margin-right:5%;
+    border-radius:12px;	
+    margin-bottom:25px;
+    text-align: center;
+    padding:2px;
+
+    }
+
+.step4{
+    width:90%;
+    height:23%%;
+    border-style:solid;
+    border-color:#af0c5e; 
+    display:inline-block;
+    margin-right:5%;
+    border-radius:12px;	
+    margin-bottom:25px;
+    text-align: center;
+    padding:2px;
+
+    }
+.step5{
+    width:90%;
+    height:23%%;
+    border-style:solid;
+    border-color:#af0c5e; 
+    display:inline-block;
+    margin-right:5%;
+    border-radius:12px;	
+    margin-bottom:25px;
+    text-align: center;
+    padding:2px;
+}
+
+.bold{
+    font-weight:bold;
+    color:red;
+}
+   
+.t{
+    margin-top:100px;
+    border-radius:10px;
+    background-color:white;
+    width:500px;
+    height:50px;
+    margin-left:500px;
+}
+.t p {
+    text-align:center;
+    padding:2%;
+    font-size:18px;
+
+}
+</style>
+    </head>
+    <body>
+
+        <div class="nheader">
+            <!--   <img src="tuqa.jpg"  title="logo" style ="margin-top:0px; object-fit: cover; border-radius: 30%; padding-top:0px; width:200px ; high :200px "/>-->
+ 
+                 <ul>
+                   <li> <a href ={% url 'predicet' %}> الرئيسية</a>  </li>
+                   <li> <a href ={% url 'asmaa' %}> استكشف معنا</a> </li>
+                   <li> <a href ={% url 't3' %}> خطط الرعاية </a>  </li>
+                 </ul>
+         </div>
+        
+    {% comment %} <form method="post" enctype="multipart/form-data" action="predImg">
+
+        <div class="a1">{% csrf_token %}<label for="inputTag">اختر الصورة<input type ="file" required name ="img" id ="img" class="inputfile1"> </label></div>
+            
+        <button type ="submit" name="predict" value= "Predict" title="Click here to predict" class="predict">انقر لإظهار النتيجة  </button> {% endcomment %}
+        <div class="img1">    {% if url %}  <img  class = "img2" src="{{ url }}" />  {% endif  %} </div>
+        <div class="name1"> {{classes}} </div>
+        {% comment %} <div class ="prop1"> {{p1}} </div> {% endcomment %}
+        <br>
+        {% comment %} <div class="A" >
+            <div class = "name_pop"> :الاسم الشائع  </div>
+            <div class = "name_pop2">   {{cname}}    </div>
+            <div class = "s1">   :الجنس/النوع</div>
+            <div class = "s2">         {{gene}} </div>
+            <div class = "t1"> :التوزع</div>
+            <div class = "t2"> {{dis}} </div>
+            <div class = "d1">الاستخدام/الفوائد  </div>
+            <div class = "d2"> {{use}}</div>
+            <div class = "h1"> :طريقة التكاثر </div>
+            <div class = "h2"> {{grow}}</div>
+        </div> {% endcomment %}
+  
+
+    <fieldset class="care">
+        
+     <div class ="step1" > 		<p> <span class="bold">الاسم الشائع </span> <br>{{step1}} </p></div><br>
+     <div class ="step2" >  	<p> <span class="bold">النوع </span> <br>{{step2}} </p>			</div><br>
+     <div class ="step3" >  	<p> <span class="bold"> التوزع </span> <br>{{step3}} </p>			</div><br>
+     <div class ="step4" >  	<p> <span class="bold"> طريقة التكاثر </span><br>{{step4}} </p>			</div><br>
+     <div class ="step5" >  	<p> <span class="bold"> الاستخدام والفوائد </span><br>{{step5}} </p>			</div><br>
+    </fieldset>
+
+      <div class = "t" ><p>إليك الصور الأكثر مشابهةً لنبتتك , مرفقاً تحت كل صورة اسم النبتة ونسبة تشابهها </p></div>
+	
+      <div class="f" >
+        {% comment %} <div class ="prop2"> {{p2}} </div>
+		<div class ="prop3"> {{p3}} </div>
+		<div class ="prop4"> {{p4}} </div>
+		<div class ="prop5"> {{p5}} </div>	 {% endcomment %}
+
+		<div class ="image1">  {% if url %} <img class="img3"src="{{ u1 }}" /> {% endif  %} </div>
+		<div class ="image2">  {% if url %} <img class="img3"src="{{ u2}}"  /> {% endif  %} </div>
+		<div class ="image3">  {% if url %} <img class="img3"src="{{ u3 }}" /> {% endif  %} </div>
+		<div class ="image4">  {% if url %} <img class="img3"src="{{ u4 }}" /> {% endif  %} </div> 
+		<div class ="nameplan1"> {{s1}} </div>
+		<div class ="nameplan2"> {{s2}} </div>
+		<div class ="nameplan3"> {{s3}} </div>
+		<div class ="nameplan4"> {{s4}} </div>		
+	</div>
+
+    <p class ='tip'>
+        <i class='far fa-bell' style='font-size:20px;color:#fa0270'></i>
+         اضغط هنا لادخال حالة جديدة <a href="{% url 'asmaa' %}"> <i class='fas fa-code' style='font-size:15px;color:#fa0270'></i> </a>
+    </p>
+
+    </body>
+</html>

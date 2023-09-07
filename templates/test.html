@@ -1,0 +1,19 @@
+
+
+<!DOCTYPE html>
+<html>
+    <body>
+        <form method="post" enctype="multipart/form-data" action="predImg">
+
+            {% csrf_token %}
+            <input type ="file" required name ="img" id ="img" class="inputfile1">
+            <br>
+            <br>
+            <button type ="submit" name="predict" value= "Predict" title="Click here to predict">PREDICT  </button>
+<a href=""></a>
+            {{probs}}
+
+            <br>
+            {{classes}}
+    </body>
+</html>

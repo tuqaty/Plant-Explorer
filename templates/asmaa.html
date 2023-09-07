@@ -1,0 +1,232 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf_8">
+        <meta name="descrition" content="Plants">
+        <style type="text/css">
+        @import url(http://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
+            
+        body {
+          background-image : url("{% static 'images/pic9.jpg' %}");
+          background-attachment:fixed;
+          background-repeat:no-repeat;
+          background-size: cover;
+          background-position:center;
+          padding: 0;
+          margin: 0;
+          height:100%;
+          width:100%;
+        }
+      p{
+      color:black ;
+      }
+       
+        h1,
+      h2 {
+        font-family: "Tohama", cursive;
+        color:black;
+      }
+      
+      {% comment %} .heading_container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+      } {% endcomment %}
+      
+      {% comment %} .heading_container h2 {
+        position: relative;
+        margin-bottom: 10;
+        font-size: 2.5rem;
+        font-weight: bold;
+      }
+      
+      .heading_container p {
+        margin-top: 1px;
+        margin-bottom: 0;
+      }
+      
+      .heading_container.heading_center {
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        text-align: center;
+      }
+       {% endcomment %}
+      a,
+      a:hover,
+      a:focus {
+        text-decoration: none;
+      }
+      
+      a:hover,
+      a:focus {
+        color: initial;
+       
+      }
+      
+      .btn,
+      .btn:focus {
+        outline: none !important;
+        -webkit-box-shadow: none;
+                box-shadow: none;
+      }
+       ul{
+	padding-right:25px;
+	margin-top :2px;
+	float : right;
+}
+
+li{
+	display : inline-block ;
+	padding-left : 25px ;
+	color: #410326;
+	font-size : 18px;
+	font-family:'Droid Arabic Kufi';
+
+}
+
+a{
+	text-decoration-line: none;
+	display: inline-block;
+	padding: 10px 30px;
+	background-color: #f3a4cc;
+	color: #af0c5e;
+	border-radius: 0;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+	border: none;
+	margin-top: 0px;
+    border-radius: 8px;
+	border-color:#af0c5e;
+}
+	  
+a:hover {
+    -webkit-transform: translateY(-3px);
+            transform: translateY(-3px);
+    -webkit-box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.15);
+            box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.15);
+            background-color : #af0c5e;
+            color: #f3a4cc;
+            font-size:18px;
+            border-style: double;
+            border-color:#f3a4cc;
+  }	  
+	  
+.nheader{
+	background-color : #af0c5e; 
+	padding : 50px ;
+	height : 25px ;
+	text-align :left ;
+	left :50px ;
+
+}
+
+label{
+    cursor: pointer;
+    font-family:'Droid Arabic Kufi';
+}
+.a1{
+  padding:25px 10px;
+  background:#ac266f;
+  border:1px solid #ac266f;
+  position:relative;
+  color:#fff;
+  border-radius:10px;
+  text-align:center;
+  display:flex;
+  cursor:pointer;
+  {% comment %} margin: 30px 0 0 650px; {% endcomment %}
+  height: 30px;
+  width: 80px;
+  margin-left:190px;
+  margin-top:20px;
+}
+.inputfile1{
+    {% comment %} opacity: 0;
+    cursor: pointer;
+    height: 100%;
+    font-size: 24px;
+    width: 100%;
+    margin-left:50px; {% endcomment %}
+    color:#ac266f;
+
+}
+.predict{
+    background-color: #af0c5e;
+    font-family:'Droid Arabic Kufi';
+    width: 300px;
+    height: 50px;
+    border: #f2b7cf solid 2px;
+    border-radius: 10px;
+    {% comment %} margin: 30px 500px 0 0px; {% endcomment %}
+    text-align:center;
+    color:white;
+    float:right;
+    margin-top:15px;
+    margin-right:80px;
+  }
+.in{
+	padding : 18px 10px;
+	margin-top:30px;
+	margin-right:100px;
+	background-color:#F0FFFF;
+	border-radius:12px;
+  margin-left:150px;
+}
+.sb{
+	padding:12px 8px;
+	margin-top:50px;
+	background-color: #ADD8E6;
+	border-radius:45%;
+  margin-left:210px;
+}
+.tuqa{
+      width:35%;
+      height:400px;
+      background-color:#f2bacd;
+      border-style:double;
+      border-radius:15%;
+      border-color:#765f4;
+      margin-top:25px;
+      margin-left:32.5%;
+}
+
+      </style>
+    </head>
+    <body>
+
+        <div class="nheader">
+                  <ul>
+                   <li> <a href ={% url 'predicet' %}> الرئيسية</a>  </li>
+                   <li> <a href ={% url 'page1' %}> استكشف معنا</a> </li>
+                   <li> <a href ={% url 't3' %}> خطط الرعاية </a>  </li>
+                 </ul>
+        </div>
+
+        <div class ="tuqa">
+          <form method="post" enctype="multipart/form-data" action="predImg">
+              {% comment %} <div class="a1">{% csrf_token %}<label for="inputTag">اختر الصورة<input type ="file" required name ="img" id ="img" class="inputfile1"> </label></div> {% endcomment %}
+              {% csrf_token %}
+              <div class ="a1"><input class="inputfile1"  type ="file" required name ="img" id ="img" value="اختر"> </div><br>
+              {% comment %} <button  class="a1" type ="submit" name="predict" value= "Predict"  action="function" title="Click here to predict">{% csrf_token %}&nbsp&nbsp&nbsp;اختبر &nbsp; &nbsp; <i class='fas fa-chart-line' style='font-size:20px;color:white'></i></button></td>           {% endcomment %}
+              <button type ="submit" name="predict" value= "Predict" title="Click here to predict" class="predict">انقر لإظهار النتيجة  </button>
+
+            </form>
+	        <br><br><br>
+          <form method="GET" enctype="multipart/form-data" action="predImg2">     
+              <input type="text" name="p1" class="in">
+	            <input type="submit" value="Result" class="sb">
+         </form>
+        </dev>
+
+    </body>
+
+</html>

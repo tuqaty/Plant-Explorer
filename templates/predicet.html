@@ -1,0 +1,271 @@
+{% load static %}
+<!DOCTYPE html>
+<html utf_8>
+    <head>
+        <title>
+            PLANTS
+        </title>
+        <meta charset="utf_8">
+        <meta name="descrition" content="Plants">
+        <style type="text/css">
+
+            @import url(http://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
+            
+              body {
+                background-image : url("{% static 'images/pic9.jpg' %}");
+                background-attachment:fixed;
+                background-repeat:no-repeat;
+                background-size: cover;
+                background-position:center;
+                padding: 0;
+                margin: 0;
+                height:100%;
+                width:100%;
+              }
+            p{
+            color:black ;
+            }
+             
+              h1,
+            h2 {
+              font-family: "Tohama", cursive;
+              color:black;
+            }
+            
+            .heading_container {
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: flex;
+              -webkit-box-orient: vertical;
+              -webkit-box-direction: normal;
+                  -ms-flex-direction: column;
+                      flex-direction: column;
+              -webkit-box-align: start;
+                  -ms-flex-align: start;
+                      align-items: flex-start;
+            }
+            
+            .heading_container h2 {
+              position: relative;
+              margin-bottom: 10;
+              font-size: 2.5rem;
+              font-weight: bold;
+            }
+            
+            .heading_container p {
+              margin-top: 1px;
+              margin-bottom: 0;
+            }
+            
+            .heading_container.heading_center {
+              -webkit-box-align: center;
+                  -ms-flex-align: center;
+                      align-items: center;
+              text-align: center;
+            }
+            
+            a,
+            a:hover,
+            a:focus {
+              text-decoration: none;
+            }
+            
+            a:hover,
+            a:focus {
+              color: initial;
+             
+            }
+            
+            .btn,
+            .btn:focus {
+              outline: none !important;
+              -webkit-box-shadow: none;
+                      box-shadow: none;
+            }
+              .hero_area {
+                position: relative;
+                min-height: 100vh;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                        flex-direction: column;
+              }
+              
+              .hero_area .hero-bg {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+              }
+              
+              .hero_area .hero-bg img {
+                width: 100%;
+                height: 100%;
+                -o-object-fit: cover;
+                   object-fit: cover;
+              }
+              
+              .hero_area .hero-bg::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+              }
+              
+              .sub_page .hero_area {
+                min-height: auto;
+              }
+              
+              .sub_page .hero_area .hero_bg_box {
+                display: none;
+              }
+              
+              .header_section {
+                padding: 15px 0;
+              }
+            
+              
+              /*end header section*/
+            /* slider section */
+            .slider_section {
+                -webkit-box-flex: 1;
+                    -ms-flex: 1;
+                        flex: 1;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                    -ms-flex-align: center;
+                        align-items: center;
+                position: relative;
+                padding: 45px 0 75px 0;	
+              }
+              
+              .slider_section .row {
+                -webkit-box-align: center;
+                    -ms-flex-align: center;
+                        align-items: center;
+              }
+              
+              .slider_section #customCarousel1 {
+                width: 100%;
+                position: unset;
+              }
+              
+              .slider_section .detail-box {
+                color: #ffffff;
+                text-align: center;
+                  font-family: 'Droid Arabic Kufi', serif;
+            
+              }
+              .slider_section .detail-box h1 {
+                font-size: 3rem;
+                font-weight: bold;
+                margin-bottom: 15px;
+                  font-family: 'Droid Arabic Kufi', serif;
+                  color:#df0f77;
+            
+              }
+              
+              .slider_section .detail-box p {
+                font-size: 20px;
+                margin-top: 10px;
+                  font-family: 'Droid Arabic Kufi', serif;
+            
+              }
+              
+              .slider_section .detail-box a {
+                display: inline-block;
+                padding: 10px 45px;
+                background-color: #f2b7cf;
+                color:  #df0f77;
+                border-radius: 0;
+                -webkit-transition: all 0.3s;
+                transition: all 0.3s;
+                border: none;
+                margin-top: 10px;
+                font-size : 20px ;
+                font-style: bold;
+                border-radius:12px;
+              }
+              {% comment %}الزهر الغامق = df0f77
+              الزهر الفاتح = f2b7cf
+              {% endcomment %}
+              .slider_section .detail-box a:hover {
+                -webkit-transform: translateY(-3px);
+                        transform: translateY(-3px);
+                -webkit-box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.15);
+                        box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.15);
+                    background-color : #df0f77;
+                 color: #f2b7cf;
+                 font-size:20px;
+                 border-style: double; 
+                 border-radius:12px;               
+              }
+              
+              .slider_section .img-box img {
+                width: 100%;
+              }
+              
+            </style>
+    </head>
+
+
+    <body>
+
+        <header>
+          <!-- <img src="tuqa.jpg"  alt="jury" style="width:200px;height:200px; margin-left :15px ; margin-top :15px"/>-->
+        </header>
+        
+            <div class="hero_area">
+                <div class="hero-bg">
+                </div>
+                <!-- header section strats -->
+            <!-- end header section -->
+            <!-- slider section -->
+            
+        
+            <section class="slider_section ">
+                <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <div class="container ">
+                        <div class="row">
+                          <div class="col-md-7 col-lg-6 mx-auto ">
+                            <div class="detail-box">
+                              <h1>
+                               مستكشف النباتات
+                              </h1>
+                              <p>
+                                مرحباً بك في عالم الأزهار الممتع 
+                                <br>
+                                إذا كنت من محبي الورورد والنباتات الجميلة بادر إلى تصفح الموقع والتعرف على الميزات 
+                                <br>
+                               حيث يمكنك إدخال صورة لنبتة أعجبتك وتود معرفة اسمها ومعلومات عنها , أيضاً معرفة النباتات المشابهة لها 
+                                <br>
+                               أخيراً إذا كنت ترغب في معرفة كيفية رعاية نبتة منزلية فستجد دليلاً ممتعاً هنا
+                                <br>
+                                ..نتمنى لك  جولة ممتعة 
+                              </p>
+                              <div class="btn-box">
+                                <a href="{% url 'asmaa' %}" class="btn1">
+                                استكشف معنا 
+                                </a>
+                                 <a href="{% url 't3' %}" class="btn1">
+                                 خطط الرعاية 
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                      
+        </body>
+</html>

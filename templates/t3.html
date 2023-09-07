@@ -1,0 +1,396 @@
+{% load static %}
+<!DOCTYPE html>
+<html dir="rtl">
+    <head>
+        <title>identification</title>
+        <style type="text/css">
+	@import url(http://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
+		
+body {
+
+	background-image : url("{% static 'images/i.jpg' %}");
+	background-attachment:fixed;
+	background-repeat:no-repeat;
+	background-size: cover;
+    padding: 0;
+    margin: 0;
+    opacity: 0.8;
+    font-family: 'Droid Arabic Kufi', serif;
+}
+
+.nheader{
+
+	background-color : #af0c5e; 
+	padding : 50px ;
+	height : 35px ;
+	text-align :left ;
+	left :50px ;
+
+}
+.pages{
+	float:right;
+	flex:right;
+}
+.pages ul li a{
+	margin-top:10px;
+	border-style:12px;
+}
+h4{
+
+	color:#ECF9EF;
+	margin-top:0px;
+	text-align:center;
+}
+
+    nav{
+        left:160px;
+        font-weight: bold;
+        bottom: 450px;
+        position: absolute;
+		margin-left:110px;
+    }
+    ul{
+        list-style: none;
+    }
+    ul li{
+        float: left;
+        position: relative;
+    }
+    a{
+        height: 40px;
+        line-height: 40px;
+        width: 100px;
+        text-decoration: none;
+        display: block;
+        text-align: center;
+        padding: 0px 10px;
+		border-radius:0px;
+		margin-left:15px;
+		border: 1px double #af0c5e;
+		background-color: #f3a4cc;
+		color: #af0c5e;
+    }
+    a:hover{
+        background-color: #af0c5e;
+		color:#f3a4cc;
+		border-radius:8px;
+    }
+    ul li ul{
+        position: absolute;
+        display: none;
+    }
+    ul li ul li{
+        float: none;
+        width: 100px;
+        position: relative;
+		margin-left:20px;
+		left:40px;
+    }
+	ul li ul li a{
+	border-radius:0px;
+	border: 1px double #af0c5e;
+	background-color: #f3a4cc;
+	color: #af0c5e;
+	
+	}
+		ul li ul li a:hover{
+		background-color: #af0c5e;
+		color:#f3a4cc;
+		border-color:#f3a4cc;
+		border-radius:8px;
+	}
+    .first:hover .content1{
+        display:flex;
+		position:absolute;
+    }
+	
+.imgplant{
+            margin-top:100px;
+			width:250px;
+			height:250px;
+			border-radius:25%;
+			float:left;
+			margin-left:250px;
+			}
+
+.infoplant{
+			margin-top:100px;
+			width:500px;
+			height:300px;
+			float:right;
+			font-size: 18px;
+			margin-right:250px;
+			
+			}
+
+.care{
+
+		flex:left;
+	    padding: 2px 2px 4px 2px;
+		border-radius: 20px;
+		display: inline-block;
+		margin: 1.0em auto;
+		height: 600px;
+		width:100%;
+}
+
+.step1{
+	
+		margin-top:10px;
+		width:90%;
+		height:23%%;
+		border-style:solid;
+		border-color:#af0c5e; 
+		display:inline-block;
+		position:relative;
+        font-size:16px;
+		color:black;
+		padding-bottom:10px;
+		margin-right:5%;
+		border-radius:12px;	
+		margin-bottom:25px;
+		text-align: center;
+		padding:2px;
+
+	}
+
+.step2{
+		width:90%;
+		height:23%%;
+		border-style:solid;
+		border-color:#af0c5e; 
+		display:inline-block;
+		margin-right:5%;
+		border-radius:12px;	
+		margin-bottom:25px;
+		text-align: center;
+		padding:2px;
+}
+
+.step3{
+	    width:90%;
+		height:23%%;
+		border-style:solid;
+		border-color:#af0c5e; 
+		display:inline-block;
+		margin-right:5%;
+		border-radius:12px;	
+		margin-bottom:25px;
+		text-align: center;
+		padding:2px;
+
+		}
+
+.step4{
+		width:90%;
+		height:23%%;
+		border-style:solid;
+		border-color:#af0c5e; 
+		display:inline-block;
+		margin-right:5%;
+		border-radius:12px;	
+		margin-bottom:25px;
+		text-align: center;
+		padding:2px;
+
+		}
+
+.parg{
+         
+		color:#E80DCA;
+		font-size:24px;
+		font-style:blod;
+		margin-right:50px;
+		
+}
+.img2{
+
+	width:300px;
+	height:300px;
+}
+/* .all{
+dialog:inline;
+float:left;
+} */
+
+.in{
+		padding : 18px 10px;
+		margin-top:10px;
+		margin-right:20px;
+		background-color:#F0FFFF;
+		border-radius:12px;
+}
+.sb{
+		padding:12px 8px;
+		margin-top:11px;
+		background-color: #ADD8E6;
+		border-radius:45%;
+}
+.1{
+		width:50px;
+}
+ 
+           
+@media screen and (max-width:400px)
+{
+	
+	.in{
+		padding : 8px 6px;
+		margin-top:20px;
+		background-color:#F0FFFF;
+		border-radius:12px;
+       }
+   .sb{
+		margin-top:22px;
+		background-color: #ADD8E6;
+		border-radius:45%;
+        }
+}
+
+	</style>
+		
+		
+		<meta charset="utf_8">
+        <meta name="descripation" content="plant identification">
+        <title>care</title>
+
+
+	</head>
+	
+	<body>
+	
+	<div class="nheader">
+
+		<ul class="pages">
+			<li> <a href ={% url 'predicet' %}> الرئيسية</a>  </li>
+			<li> <a href ={% url 'page1' %}> استكشف معنا</a> </li>
+			<li> <a href ={% url 't3' %}> خطط الرعاية </a>  </li>
+		</ul>
+		<h4>اختر النبتة التي تود زراعتها منزلياً من الأصناف التالية وأدخل الرقم المجاور لها في خانة البحث </h4>
+
+	</div>	 
+<form method="GET" enctype="multipart/form-data" action="result">     
+	<nav>
+		<ul>
+			<li class="first"><a href="#">أزهار</a>
+			<ul class="content1">
+			<div class="l1">
+					<li class="second"><a href="#">أقحوان 1</a></li>
+					<li class="second"><a href="#">ياسمين 2</a></li>
+					<li class="second"><a href="#">ريحان 12</a></li>
+					<li class="second"><a href="#">أوركيد الفراشة 3</a></li>
+					<li class="second"><a href="#">زنابق السلام 4</a></li>     
+					<li class="second"><a href="#">مجد الصباح 45</a></li>
+					<li class="second"><a href="#" class="1">ورد الصحراء 42</a></li> 
+
+			</div>
+			<div class="l1">				
+					<li class="second"><a href="#">46 كوبية</a></li>
+					<li class="second"><a href="#">47 جربارة</a></li>
+					<li class="second"><a href="#">15 غاردينيا</a></li>
+					<li class="second"><a href="#">24 خشخاش</a></li>                        
+					<li class="second"><a href="#">27 عباد الشمس</a></li>
+					<li class="second"><a href="#">41 أزهارالكرز</a></li>
+					<li class="second"><a href="#" class="1">44 النبات الحساس</a></li>
+			</div>
+			<div class="l1">
+					<li class="second"><a href="#">30 سوسن</a></li>
+					<li class="second"><a href="#">34 جهنمية </a></li>
+					<li class="second"><a href="#">35 لافندر</a></li>
+					<li class="second"><a href="#">توليب 38</a></li>
+					<li class="second"><a href="#">39 نرجس</a></li>
+	
+		</div>				 
+				</ul>
+			</li>
+			<li class="first"><a href="#">أعشاب</a>
+			<ul class="content1">
+			<div class="l1">
+					<li class="second"><a href="#">9 كزبرة</a></li>
+					<li class="second"><a href="#">10 نعنع</a></li>
+					<li class="second"><a href="#">32 صبار ورقي</a></li>
+					<li class="second"><a href="#">الحلبة 37</a></li>
+					<li class="second"><a href="#">29 شاي</a></li>
+					<li class="second"><a href="#">43 كركديه</a></li>
+					<!-- بدي اتأكد الصندل شو نوعه-->
+					<li class="second"><a href="#">49 صندل</a></li>
+
+
+			</div>
+			
+				</ul>
+			</li>
+			<li class="first"><a href="#">خضار</a>
+				<ul class="content1">
+				<div class="l1">
+					<li class="second"><a href="#">8 كوسا</a></li>
+					<li class="second"><a href="#">18 ليمون</a></li>
+					 <li class="second"><a href="#">11 فجل</a></li>
+					<li class="second"><a href="#">فاصولياء 36</a></li>
+					<li class="second"><a href="#">50 فطر الكمأ</a></li>
+					<li class="second"><a href="#">28 فطر أبيض</a></li>
+					<li class="second"><a href="#">33 باميا</a></li>
+					<li class="second"><a href="#">40 زيتون</a></li>
+					<li class="second"><a href="#">5 فلفل أخضر</a></li>
+
+				</div>
+				</ul>
+			</li>
+			<li class="first"><a href="#">فواكه</a>
+			<ul class="content1">
+			<div class="l1">
+					<li class="second"><a href="#">14 فراولة</a></li>
+					<li class="second"><a href="#">20 برتقال</a></li>
+					<li class="second"><a href="#">22 عنب</a></li>
+					<li class="second"><a href="#">13 تين</a></li>
+					<li class="second"><a href="#">21 تفاح</a></li>
+					<li class="second"><a href="#">25 قصب السكر</a></li>
+					<li class="second"><a href="#">23 طماطم كرزية</a></li>
+					<li class="second"><a href="#">7 صبار</a></li>
+
+			</div>
+				</ul>
+			</li>
+			<li class="first"><a href="#">توابل </a>
+			<ul class="content1">
+			<div class="l1">
+					<li class="second"><a href="#">6 قرنفل</a></li>
+					<li class="second"><a href="#">19 زعفران</a></li>
+					<li class="second"><a href="#">26 زنجبيل</a></li>
+					<li class="second"><a href="#">31 فلفل أسود</a></li>
+					<li class="second"><a href="#">16 عدس</a></li>
+					<li class="second"><a href="#">17 أرز</a></li> 
+					<li class="second"><a href="#">48 قمح</a></li>
+
+
+			</div>
+			</ul>
+			</li>
+		</ul>
+	</nav>
+		<input type="text" name="p1" class="in">
+		<input type="submit" value="Result" class="sb">
+	</form>
+		<div class="transbox">
+		{% comment %}<p>اختر النبتة التي تود زراعتها منزلياً من الأصناف التالية وأدخل الرقم المجاور لها في خانة البحث </p>{% endcomment %}
+		</div>
+		
+			<div class ="imgplant" >
+				{% if url %}
+				<img class="img2"src="{{ url }}"  />
+				{% endif  %}
+			</div>
+			<div class ="infoplant" >
+				<p> {{gg}} </p>
+			</div>
+		<fieldset class="care">
+		       <!--     <legend >  إليك الخطوات :   &nbsp;<i  style="font-size:20px;color:white ; font-family = "Tohama""></i></legend>-->
+           
+			<div class ="step1" > 		<p> {{s1}} </p>			</div><br>
+			<div class ="step2" >  		<p> {{s2}} </p>			</div><br>
+			<div class ="step3" >  		<p> {{s3}} </p>			</div><br>
+			<div class ="step4" >  		<p> {{s4}} </p>			</div><br>
+		</fieldset>
+
+	</body>
+</html>
